@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-10">
+            <table class="table table-bordered">
+               <tr>
+                   <th>
+                       Sid
+                   </th>
+                   <th>Sname</th>
+                   <th>SClass</th>
+                   <th>Sdivision</th>
+                   <th>Action</th>
+               </tr>
+               <tr *ngFor="let s of student ">
+                   <td>{{s.sid}}</td>
+                   <td>{{s.sname}}</td>
+                   <td>{{s.class}}</td>
+                   <td>{{s.divison}}</td>
+                   <td><a [routerLink]="['/sdetails',s.sid]">view-student</a></td>
+               </tr>
+            </table>
+        </div>
+    </div>
+</div>

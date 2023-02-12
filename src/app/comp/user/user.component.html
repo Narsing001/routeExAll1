@@ -1,0 +1,24 @@
+<div class="conatiner">
+    <div class="row">
+        <div class="col-10 mx-auto">
+           <table class="table table-bordered">
+               <tr>
+                   <th>Epno</th>
+                   <th>Ename</th>
+                   <th>Esal</th>
+                   <th>EJob</th>
+                   <th>Action</th>
+               </tr>
+               <tr *ngFor="let e of emp">
+                   <td>{{e.epid}}</td>
+                   <td>{{e.ename}}</td>
+                   <td>{{e.epsal}}</td>
+                   <td>{{e.epjob}}</td>
+                   <td>
+                       <a [routerLink]="['/udetails',e.epid]" class=" text-blue h-10 w-20">View-Details</a>
+                   </td>
+               </tr>
+           </table>
+        </div>
+    </div>
+</div>
